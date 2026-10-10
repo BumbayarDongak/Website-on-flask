@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{post.title}}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="blog">
+    <div class="card">
+        <h1>{{post.title}}</h1>
+        <p>{{post.content}}</p>
+        <h2>Comments</h2>
+        {% if comments %}
+            {% for comment in comments %}
+                <div class="comment">
+                    <b>{{user[1]}}: {{comment[1]}}</b>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No comments</p>
+        {% endif %}
+    {% if current_user.is_authenticated %}
+        <h3>Add comment</h3>
+        <form method="POST" action="{{url_for('add_comment', post_id=post.post_id)}}">
+            <textarea name="text" rows="3" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    {% else %}
+        <p>You need to login to comment</p>
+    {% endif %}
+    </div>
+</div>
+</body>
+</html>
