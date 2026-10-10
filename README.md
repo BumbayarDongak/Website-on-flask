@@ -96,13 +96,3 @@ flask-blog/
 ├── requirements.txt
 └── README.md
 ```
-
-## 💡 What I Learned
-
-- Building web applications with Flask
-- Working with SQLite databases
-- Creating user authentication
-- Processing HTML forms
-- Using Jinja2 templates
-- Working with sessions
-- Connecting frontend and backend
