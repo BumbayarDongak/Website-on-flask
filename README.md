@@ -1,4 +1,4 @@
-# 📝 Flask Blog
+# 📝 Website of flask
 
 A simple web-based blog application built with **Python, Flask and SQLite**.
 
